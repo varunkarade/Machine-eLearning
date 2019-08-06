@@ -16,18 +16,12 @@ Neut=[u'google com', u'let know', u'confirm received', u'patience thank', u'rece
 
 
 
-#Dataset=pd.read_excel("Dummy_Neutral.xlsx", delimiter='')
 Dataset=pd.read_excel("Sentiment bulk_a.xlsx", delimiter='')
-#Dataset=pd.read_excel("Ascii_Oracle.xlsx", delimiter='')
 
-#Dataset=pd.read_excel("Live_Ticket_Analysis1.xls", delimiter='')
 
 Worklog=Dataset["worklog"]
-##tickets=Dataset["Ticket"]
 tickets=Dataset["ID"]
-#Desc=Dataset.iloc[:,3]
 Desc=Dataset["description"]
-#Summ=Dataset.iloc[:,2]
 Summ=Dataset["Summary"]
 Assign=Dataset["Assignee"]
 Group=Dataset["Group"]
@@ -130,7 +124,4 @@ for i in range(l):
         val_W='null'
         pass
         
-#book.save("test_sentiment_ASCII.xls")
-book.save("test_sentiment_except_ASCII.xls")
-
-
+book.save("test_sentiment.xls")
